@@ -1,0 +1,152 @@
+<%- include('partials/header.ejs') %>
+
+<!-- content start -->
+<div class="main">
+    <div class="d-flex head">
+        <h2 class="heading">System Information</h2>
+        <button class="btn btn-primary ml-auto" onclick="window.location.reload()">Refresh</button>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 col-xm-12 mb-5">
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">Uptime timing: </div>
+                    <%= uptime %>
+                </div>
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">CPU Cores: </div>
+                    <%= cpu_cores %>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-xm-12 mb-5">
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">Total Disk: </div>
+                    <%= totaldisk %>
+                </div>
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">Used Disk: </div>
+                    <%= useddisk %> | <%= useddisk_p %>
+                </div>
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">Free Disk: </div>
+                    <%= freedisk %>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-xm-12 mb-5">
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">Total Ram: </div>
+                    <%= totalram %>
+                </div>
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">Used Ram: </div>
+                    <%= usedram %>
+                </div>
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">Free Ram: </div>
+                    <%= freeram %>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-xm-12 mb-5">
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">Public IP V4: </div>
+                    <div id="ipv4" class="mr-auto"><%= publicIPv4 %></div>
+                    <div>
+                        <button id="copyipv4" class="btn btn-success ml-2"
+                            data-clipboard-text="<%= publicIPv4 %>">copy</button>
+                    </div>
+                </div>
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">Public IP V6: </div>
+                    <div id="ipv6" class="mr-auto"><%= publicIPv6 %></div>
+                    <div>
+                        <button id="copyipv6" class="btn btn-success ml-2"
+                            data-clipboard-text="<%= publicIPv6 %>">copy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-xm-12 mb-5">
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">Connect SSH: </div>
+                    <div id="ssh" class="mr-auto"><%= ssh %></div>
+                    <div>
+                        <button id="copyssh" class="btn btn-success ml-2" data-clipboard-text="<%= ssh %>">copy</button>
+                    </div>
+                </div>
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">Connect SSH With Key: </div>
+                    <div id="sshwithkey" class="mr-auto"><%= sshwithkey %></div>
+                    <div>
+                        <button id="copysshwithkey" class="btn btn-success ml-2"
+                            data-clipboard-text="<%= sshwithkey %>">copy</button>
+                    </div>
+                </div>
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">SCP Local To Server: </div>
+                    <div id="scplts" class="mr-auto"><%= scplts %></div>
+                    <div>
+                        <button id="copyscplts" class="btn btn-success ml-2"
+                            data-clipboard-text="<%= scplts %>">copy</button>
+                    </div>
+                </div>
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">SCP Server To Local: </div>
+                    <div id="scpstl" class="mr-auto"><%= scpstl %></div>
+                    <div>
+                        <button id="copyscpstl" class="btn btn-success ml-2"
+                            data-clipboard-text="<%= scpstl %>">copy</button>
+                    </div>
+                </div>
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">SCP Local To Server With Key: </div>
+                    <div id="scpltswithkey" class="mr-auto"><%= scpltswithkey %></div>
+                    <div>
+                        <button id="copyscpltswithkey" class="btn btn-success ml-2"
+                            data-clipboard-text="<%= scpltswithkey %>">copy</button>
+                    </div>
+                </div>
+                <div class="mb-2 d-flex">
+                    <div class="font-weight-bold mr-2">SCP Server To Local With Key: </div>
+                    <div id="scpstlwithkey" class="mr-auto"><%= scpstlwithkey %></div>
+                    <div>
+                        <button id="copyscpstlwithkey" class="btn btn-success ml-2"
+                            data-clipboard-text="<%= scpstlwithkey %>">copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+
+            <%- include('partials/footer.ejs') %>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+            <script src="/copy.js"></script>
+            <script>
+                activeSideBar('systeminfo');
+
+                const form = $('form');
+
+                form.on('submit', submitHandler)
+
+                function submitHandler(e) {
+                    e.preventDefault()
+
+                    // PREPARE FORM DATA
+                    var formData = {
+                        newpassword: form.serializeArray()[0].value
+                    };
+
+                    // DO POST
+                    $.ajax({
+                        type: "POST",
+                        contentType: "application/json",
+                        url: "changepassword",
+                        data: JSON.stringify(formData)
+                    }).done(res => {
+                        if (res == 'success') {
+                            // alert('Password updated successfully');
+                            window.location.reload();
+                        } else {
+                            alert(res);
+                        }
+                    });
+                }
+            </script>

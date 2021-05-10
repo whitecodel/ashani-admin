@@ -1,0 +1,50 @@
+{
+  "name": "chalk-animation",
+  "description": "Colorful animations in terminal output",
+  "version": "1.6.0",
+  "author": "Boris K",
+  "bin": "./cli.js",
+  "bugs": "https://github.com/bokub/chalk-animation/issues",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "gradient-string": "^1.1.0",
+    "meow": "^4.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "codecov": "^3.0.0",
+    "nyc": "^11.6.0",
+    "xo": "^0.20.3"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "homepage": "https://github.com/bokub/chalk-animation",
+  "keywords": [
+    "animation",
+    "chalk",
+    "cli",
+    "color",
+    "colors",
+    "colour",
+    "command-line",
+    "console",
+    "formatting",
+    "gradient",
+    "log",
+    "logging",
+    "rainbow",
+    "shell",
+    "string",
+    "style",
+    "styles",
+    "terminal"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "bokub/chalk-animation",
+  "scripts": {
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "test": "xo && nyc ava --serial"
+  }
+}
