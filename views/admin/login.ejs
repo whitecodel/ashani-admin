@@ -1,172 +1,212 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Admin Login</title>
-    <link rel="stylesheet" href="includes/bootstrap.min.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="/admin/css/bootstrap.min.css" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container h-100">
-        <div class="d-flex justify-content-center h-100">
-            <div class="user_card">
-                <div class="d-flex justify-content-center">
-                    <div class="brand_logo_container">
-                        <div class="brand_logo">
-                            <b style="vertical-align: middle;
-                            line-height: 148px; font-size: 114px;">A</b>
-                        </div>
-                        <!-- <img src="https://cdn.freebiesupply.com/logos/large/2x/pinterest-circle-logo-png-transparent.png"
+      <div class="d-flex justify-content-center h-100">
+        <div class="user_card">
+          <div class="d-flex justify-content-center">
+            <div class="brand_logo_container">
+              <div class="brand_logo">
+                <b
+                  style="
+                    vertical-align: middle;
+                    line-height: 148px;
+                    font-size: 114px;
+                  "
+                  >A</b
+                >
+              </div>
+              <!-- <img src="https://cdn.freebiesupply.com/logos/large/2x/pinterest-circle-logo-png-transparent.png"
                             class="brand_logo" alt="Logo"> -->
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center form_container">
-                    <form>
-                        <div class="input-group mb-3">
-                            <div class="input-group-append">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" name="username" id="username" class="form-control username" value=""
-                                placeholder="username">
-                        </div>
-                        <div class="input-group mb-2">
-                            <div class="input-group-append">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" name="password" id="password" class="form-control password" value=""
-                                placeholder="password">
-                        </div>
-                        <div class="form-group">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                <label class="custom-control-label" for="customControlInline">Remember me</label>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center mt-3 login_container">
-                            <button type="submit" name="button" class="btn login_btn">Login</button>
-                        </div>
-                    </form>
-                </div>
             </div>
+          </div>
+          <div class="d-flex justify-content-center form_container">
+            <form>
+              <div class="input-group mb-3">
+                <div class="input-group-append">
+                  <span class="input-group-text"
+                    ><i class="fas fa-user"></i
+                  ></span>
+                </div>
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  class="form-control username"
+                  value=""
+                  placeholder="username"
+                />
+              </div>
+              <div class="input-group mb-2">
+                <div class="input-group-append">
+                  <span class="input-group-text"
+                    ><i class="fas fa-key"></i
+                  ></span>
+                </div>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control password"
+                  value=""
+                  placeholder="password"
+                />
+              </div>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="customControlInline"
+                  />
+                  <label class="custom-control-label" for="customControlInline"
+                    >Remember me</label
+                  >
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-3 login_container">
+                <button type="submit" name="button" class="btn login_btn">
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</body>
-<style>
+  </body>
+  <style>
     /* Coded with love by Mutiullah Samim */
     body,
     html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        color: #c4c1c1;
-        background: #30363b !important;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      color: #c4c1c1;
+      background: #30363b !important;
     }
 
     .user_card {
-        height: 350px;
-        width: 350px;
-        margin-top: auto;
-        margin-bottom: auto;
-        background: #445869;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 5px;
-
+      height: 350px;
+      width: 350px;
+      margin-top: auto;
+      margin-bottom: auto;
+      background: #445869;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 5px;
     }
 
     .brand_logo_container {
-        position: absolute;
-        height: 170px;
-        width: 170px;
-        top: -75px;
-        border-radius: 50%;
-        background: #60a3bc;
-        padding: 10px;
-        text-align: center;
+      position: absolute;
+      height: 170px;
+      width: 170px;
+      top: -75px;
+      border-radius: 50%;
+      background: #60a3bc;
+      padding: 10px;
+      text-align: center;
     }
 
     .brand_logo {
-        height: 150px;
-        width: 150px;
-        border-radius: 50%;
-        border: 2px solid white;
-        background: #1e2e3c;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      border: 2px solid white;
+      background: #1e2e3c;
     }
 
     .form_container {
-        margin-top: 100px;
+      margin-top: 100px;
     }
 
     .login_btn {
-        width: 100%;
-        background: #04212f !important;
-        color: white !important;
+      width: 100%;
+      background: #04212f !important;
+      color: white !important;
     }
 
     .login_btn:focus {
-        box-shadow: none !important;
-        outline: 0px !important;
+      box-shadow: none !important;
+      outline: 0px !important;
     }
 
     .login_container {
-        padding: 0 2rem;
+      padding: 0 2rem;
     }
 
     .input-group-text {
-        background: #1e2e3c !important;
-        color: white !important;
-        border: 0 !important;
-        border-radius: 0.25rem 0 0 0.25rem !important;
+      background: #1e2e3c !important;
+      color: white !important;
+      border: 0 !important;
+      border-radius: 0.25rem 0 0 0.25rem !important;
     }
 
     .input_user,
     .input_pass:focus {
-        box-shadow: none !important;
-        outline: 0px !important;
+      box-shadow: none !important;
+      outline: 0px !important;
     }
 
-    .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-        background-color: #343a40 !important;
+    .custom-checkbox
+      .custom-control-input:checked
+      ~ .custom-control-label::before {
+      background-color: #343a40 !important;
     }
-</style>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  </style>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"
+  ></script>
 
-<script>
-    var form = $('form');
+  <script>
+    var form = $("form");
     console.log(form);
 
-    form.on('submit', submitHandler);
+    form.on("submit", submitHandler);
 
     function submitHandler(e) {
-        e.preventDefault();
+      e.preventDefault();
 
-        // DO POST
-        $.ajax({
-            type: "POST",
-            contentType: "application/json",
-            url: window.location + "/../login",
-            data: JSON.stringify({
-                username: $('#username').val(),
-                password: $('#password').val(),
-            }),
-        }).done(res => {
-            if (res == 'success') {
-                window.location.href = '/';
-            } else {
-                window.location.href = res;
-            }
-        }).fail(function (xhr, status, error) {
-            alert(xhr.responseText);
+      // DO POST
+      $.ajax({
+        type: "POST",
+        contentType: "application/json",
+        url: window.location + "/../login",
+        data: JSON.stringify({
+          username: $("#username").val(),
+          password: $("#password").val(),
+        }),
+      })
+        .done((res) => {
+          if (res == "success") {
+            window.location.href = "/";
+          } else {
+            window.location.href = res;
+          }
+        })
+        .fail(function (xhr, status, error) {
+          alert(xhr.responseText);
         });
     }
-</script>
-
+  </script>
 </html>
