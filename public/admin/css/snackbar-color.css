@@ -1,0 +1,44 @@
+.snackbar-custom-b {
+  background: black !important;
+}
+
+.snackbar-custom-p {
+  background: rgb(20, 90, 220) !important;
+}
+
+.snackbar-custom-s {
+  background: green !important;
+}
+
+.snackbar-custom-w {
+  background: rgb(226, 222, 13) !important;
+}
+
+.snackbar-custom-d {
+  background: crimson !important;
+}
+
+.snackbar-custom-b p {
+  color: white !important;
+  font-size: 17px !important;
+}
+
+.snackbar-custom-p p {
+  color: white !important;
+  font-size: 17px !important;
+}
+
+.snackbar-custom-s p {
+  color: white !important;
+  font-size: 17px !important;
+}
+
+.snackbar-custom-w p {
+  color: black !important;
+  font-size: 17px !important;
+}
+
+.snackbar-custom-d p {
+  color: white !important;
+  font-size: 17px !important;
+}
