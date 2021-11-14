@@ -2,7 +2,7 @@ const util = require("util");
 const exec = util.promisify(require("child_process").exec);
 
 class SystemInfoController {
-    static cmd = (cmd) => {
+    static cmd = async (cmd) => {
         try {
             const { stdout, stderr } = await exec(cmd);
             if (stderr) {
