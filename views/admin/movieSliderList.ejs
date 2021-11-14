@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs') %>
+
+<!-- content start -->
+<div class="main">
+    <div class="d-flex head">
+        <h2 class="heading">Movie Sliders :-</h2>
+    </div>
+    <div class="content"></div>
+    <div>
+        <%- include ('partials/footer.ejs') %>
+
+        <script>
+            // siderbar activating start
+            activeSideBar("slider-li");
+            activeSideBar("list-movie-slider");
+            var sliders = $("#sliders").find("#home_expand");
+            var submenu = $("#sliders").find(".submenu");
+            sliders.text("expand_less");
+            submenu.show();
+            // sidebar activaitng end
+        </script>
+    </div>
+</div>
