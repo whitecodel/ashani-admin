@@ -6,7 +6,6 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const AppRoutes = require('./app-routes');
 const AdminRoutes = require('./admin-routes');
-const bodyParser = require('body-parser');
 const createAdmin = require('./config/createAdmin');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
@@ -63,7 +62,7 @@ app.use(session({
 }));
 
 //middleware
-app.use(bodyParser.json());
+app.use(express.json());
 
 //routes
 AppRoutes(app);
