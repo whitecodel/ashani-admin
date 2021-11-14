@@ -13,7 +13,7 @@ const MongoStore = require('connect-mongo')(session);
 // create admin
 const result = createAdmin();
 if (!result) {
-    print('admin creation failed');
+    console.log('admin creation failed');
     process.exit();
 }
 
