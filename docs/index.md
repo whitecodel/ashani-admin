@@ -1,37 +1,109 @@
-## Welcome to GitHub Pages
+## Welcome to Ashani Admin
 
-You can use the [editor on GitHub](https://github.com/whitecodel/ashani-admin/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+### an admin panel with nodejs for backend development
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### WhiteCodel presents you an admin panel with nodejs, ejs, express, mongoose to minimize your basic operations like
 
-### Markdown
+-   mvc architacture
+-   jwt token authentication
+-   jwt session authentication
+-   send email
+-   image filter
+-   snackbar
+-   routes management
+-   api for app
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Get Started
 
-```markdown
-Syntax highlighted code block
+#### INSTALLATION:
 
-# Header 1
-## Header 2
-### Header 3
+    git clone https://github.com/whitecodel/ashani-admin.git
 
-- Bulleted
-- List
+    cd ashani-admin
 
-1. Numbered
-2. List
+    npm install
 
-**Bold** and _Italic_ and `Code` text
+#### RUN:
 
-[Link](url) and ![Image](src)
-```
+    npm run dev
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+now code is running on internal ip 127.0.0.1 and port 3000
 
-### Jekyll Themes
+#### HOW IT WORKS:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/whitecodel/ashani-admin/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+-   As soon as the app starts, the index.js file is run, and inside it is the create admin function call, which creates the initial admin.
+-   We are using ejs view engine with express.js in it.
 
-### Support or Contact
+#### BASIC CONFIGURSTIONS:
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+##### **file .env:**
+
+**here you can setup**
+
+-   mongo db uri
+-   default port
+-   salt round
+-   token secret
+-   session secret
+-   admin default password
+
+##### **file config/createAdmin.js:**
+
+**in this file there is a function createadmin() this function is called as soon as the app is run which creates a new admin**
+
+##### **file config/imageFilter.js:**
+
+**in this file there is a function imageFilter() you can use this function with multer to validate a image**
+
+##### **file config/mailer.js:**
+
+**in this file there is a function sendEmail() You can use this function to send email**
+
+    sendEmail({to, subject, body});
+
+#### FOLDER STRUCTURE:
+
+##### **folder middlewares:**
+
+**There are 2 middleware files in it. Adminauth.js and Appauth.js have middleware made for admin and app respectively, you can create all your middlewares here.**
+
+**NotLoggedIn => checking loggedin in both file**
+
+##### **folder models:**
+
+**You can create all your models here.**
+
+##### **folder public:**
+
+**In public folder you can put your static files like css, js, images**
+
+##### **folder views:**
+
+**In this folder you can create all your views for admin or app. If you do not know how to use ejs, then you can see the documentation by visiting its official website [ejs.co](https://ejs.co/).**
+
+#### ROUTES:
+
+##### **ADMIN ROUTES:**
+
+-   make a file for your crud and other operation in routes/admin.
+-   register this file into admin-routes.js
+
+##### **APP ROUTES:**
+
+-   make a file for your crud and other operation in routes/app.
+-   register this file into app-routes.js
+
+## Features
+
+#### SNACKBAR:
+
+success =>
+
+    successSnakbar(msg);
+
+failed =>
+
+    failedSnakbar(msg);
+
+default position is bottom-right if you want to change position you can pass extra parameter  
+**EX:** `successSnakbar(msg, "bottom-right")`
