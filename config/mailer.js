@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const nodemailer = require('nodemailer');
 
-const sendEmail = async (subject, body) => {
+const sendEmail = async ({to, subject, body}) => {
   return new Promise((resolve, reject) => {
     var transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -13,7 +13,7 @@ const sendEmail = async (subject, body) => {
 
     var mailOptions = {
       from: 'admin@gmail.com',
-      to: 'username@gmail.com',
+      to: to,
       subject: subject, 
       text: body
     };
