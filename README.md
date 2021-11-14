@@ -30,6 +30,9 @@ now code is running on internal ip 127.0.0.1 and port 3000
 ##### **file config/createAdmin.js:** 
 **in this file there is a function createadmin() this function is called as soon as the app is run which creates a new admin**
 
+##### **file config/imageFilter.js:** 
+**in this file there is a function imageFilter() you can use this function with multer to validate a image**
+
 ##### **folder public:** 
 **In public folder you can put your static files like css, js, images**
 
