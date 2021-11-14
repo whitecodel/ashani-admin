@@ -18,16 +18,20 @@ class SystemInfoController {
     };
 
     static systemInfo = async (req, res) => {
-        const totalDiskSpace = await cmd(
+        const totalDiskSpace = await this.cmd(
             "df -h / | tail -1 | awk '{print $2}'"
         );
-        const usedDiskSpace = await cmd("df -h / | tail -1 | awk '{print $3}'");
-        const freeDiskSpace = await cmd("df -h / | tail -1 | awk '{print $4}'");
-        const usedDiskSpaceP = await cmd(
+        const usedDiskSpace = await this.cmd(
+            "df -h / | tail -1 | awk '{print $3}'"
+        );
+        const freeDiskSpace = await this.cmd(
+            "df -h / | tail -1 | awk '{print $4}'"
+        );
+        const usedDiskSpaceP = await this.cmd(
             "df -h / | tail -1 | awk '{print $5}'"
         );
-        const cpuCores = await cmd("nproc");
-        const uptime = await cmd(`uptime | awk -F'( |,|:)+' '{
+        const cpuCores = await this.cmd("nproc");
+        const uptime = await this.cmd(`uptime | awk -F'( |,|:)+' '{
                 d=h=m=0;
                 if ($7=="min")
                     m=$6;
@@ -39,13 +43,13 @@ class SystemInfoController {
                 {
                     print d+0,"days,",h+0,"hours,",m+0,"minutes."
                 }'`);
-        const totalRam = await cmd(
+        const totalRam = await this.cmd(
             "free -m | grep Mem | awk '{print $2 / 1000}'"
         );
-        const freeRam = await cmd(
+        const freeRam = await this.cmd(
             "free -m | grep Mem | awk '{print $4 / 1000}'"
         );
-        const buffRam = await cmd(
+        const buffRam = await this.cmd(
             "free -m | grep Mem | awk '{print $6 / 1000}'"
         );
         const totalRamF = parseFloat(totalRam).toFixed(2) + " GB";
@@ -53,21 +57,21 @@ class SystemInfoController {
         const freeRamF =
             (parseFloat(totalRam) - (totalRam - freeRam - buffRam)).toFixed(2) +
             " GB";
-        const publicIPv4tmp = await cmd(
+        const publicIPv4tmp = await this.cmd(
             "dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com"
         );
         const publicIPv4 = publicIPv4tmp
             .replace('"', "")
             .replace('"', "")
             .replace(" ", "");
-        const publicIPv6tmp = await cmd(
+        const publicIPv6tmp = await this.cmd(
             "dig -6 TXT +short o-o.myaddr.l.google.com @ns1.google.com"
         );
         const publicIPv6 = publicIPv6tmp
             .replace('"', "")
             .replace('"', "")
             .replace(" ", "");
-        const user = await cmd("echo $USER");
+        const user = await this.cmd("echo $USER");
         const userF = user.replace(" ", "");
         const ssh = `ssh ${userF}@${publicIPv4}`;
         const sshwithkey = `ssh -i /path/key.pem ${userF}@${publicIPv4}`;
