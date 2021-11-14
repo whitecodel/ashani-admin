@@ -5,7 +5,7 @@ const systeminfo = require("./routes/admin/systeminfo");
 const { NotLoggedIn } = require("./middlewares/Adminauth");
 
 const AppRoutes = (app) => {
-    app.use("/", NotLoggedIn, main);
+    app.use("/", main);
     app.use("/admin", auth);
     app.use("/admin", NotLoggedIn, dashboard);
     app.use("/admin", NotLoggedIn, systeminfo);
