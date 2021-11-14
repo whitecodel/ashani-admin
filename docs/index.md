@@ -1,4 +1,4 @@
-## Welcome to Ashani Admin
+## Welcome to Ashani Admin Panel
 
 ### an admin panel with nodejs for backend development
 
