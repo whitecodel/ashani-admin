@@ -70,6 +70,18 @@ now code is running on internal ip 127.0.0.1 and port 3000
 
 **In this folder you can create all your views for admin or app. If you do not know how to use ejs, then you can see the documentation by visiting its official website [ejs.co](https://ejs.co/).**
 
+#### ROUTES:
+
+##### **ADMIN ROUTES:**
+
+-   make a file for your crud and other operation in routes/admin.
+-   register this file into admin-routes.js
+
+##### **APP ROUTES:**
+
+-   make a file for your crud and other operation in routes/app.
+-   register this file into app-routes.js
+
 ## Features
 
 #### SNACKBAR:
