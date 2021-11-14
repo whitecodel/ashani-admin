@@ -1,8 +1,6 @@
-const router = require('express').Router();
-const { NotLoggedIn } = require('../../middlewares/Adminauth');
+const router = require("express").Router();
+const MainController = require("../../controllers/admin/mainController");
 
-router.get('/', NotLoggedIn, async (req, res) => {
-    return res.redirect('/admin/dashboard');
-});
+router.get("/", MainController.main);
 
 module.exports = router;

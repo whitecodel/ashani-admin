@@ -1,8 +1,5 @@
-const router = require('express').Router();
-const { NotLoggedIn } = require('../../middlewares/Appauth');
+const router = require("express").Router();
 
-router.get('/home', NotLoggedIn, async (req, res) => {
-    return res.send('Home routes working');
-});
+router.get("/home", NotLoggedIn);
 
 module.exports = router;
