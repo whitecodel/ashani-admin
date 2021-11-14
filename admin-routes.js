@@ -1,7 +1,7 @@
-const main = require("./routes/admin-routes/main");
-const auth = require("./routes/admin-routes/auth");
-const dashboard = require("./routes/admin-routes/dashboard");
-const systeminfo = require("./routes/admin-routes/systeminfo");
+const main = require("./routes/admin/main");
+const auth = require("./routes/admin/auth");
+const dashboard = require("./routes/admin/dashboard");
+const systeminfo = require("./routes/admin/systeminfo");
 const { NotLoggedIn } = require("./middlewares/Adminauth");
 
 const AppRoutes = (app) => {
