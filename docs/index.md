@@ -107,3 +107,21 @@ failed =>
 
 default position is bottom-right if you want to change position you can pass extra parameter  
 **EX:** `successSnakbar(msg, "bottom-right")`
+
+#### SWITCH:
+
+[gitbrent bootstrap4-toggle](https://gitbrent.github.io/bootstrap4-toggle/) is now enabled
+
+**EX:**
+
+    <input
+        name="approved"
+        type="checkbox"
+        id="approved"
+        data-width="100%"
+        data-toggle="toggle"
+        data-on="Approved"
+        data-off="Not Approved"
+        data-onstyle="success"
+        data-offstyle="danger"
+    />
