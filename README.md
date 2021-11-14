@@ -2,6 +2,17 @@
 
 ### an admin panel with nodejs for backend development
 
+### WhiteCodel presents you an admin panel with nodejs, ejs, express, mongoose to minimize your basic operations like
+
+-   mvc architacture
+-   jwt token authentication
+-   jwt session authentication
+-   send email
+-   image filter
+-   snackbar
+-   routes management
+-   api for app
+
 ## Get Started
 
 #### INSTALLATION:
