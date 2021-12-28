@@ -10,6 +10,8 @@
 
     123456
 
+## Docs [here](https://whitecodel.github.io/ashani-admin/)
+
 ### WhiteCodel presents you an admin panel with nodejs, ejs, express, mongoose to minimize your basic operations like
 
 -   mvc architacture
