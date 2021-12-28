@@ -99,14 +99,14 @@ now code is running on internal ip 127.0.0.1 and port 3000
 
 success =>
 
-    successSnakbar(msg);
+    successSnackbar(msg);
 
 failed =>
 
-    failedSnakbar(msg);
+    failedSnackbar(msg);
 
 default position is bottom-right if you want to change position you can pass extra parameter  
-**EX:** `successSnakbar(msg, "bottom-right")`
+**EX:** `successSnackbar(msg, "bottom-right")`
 
 #### SWITCH:
 
