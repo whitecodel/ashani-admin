@@ -2,6 +2,8 @@
 
 ### an admin panel with nodejs for backend development
 
+## Demo: [https://ashani-admin.herokuapp.com](https://ashani-admin.herokuapp.com)
+
 ### WhiteCodel presents you an admin panel with nodejs, ejs, express, mongoose to minimize your basic operations like
 
 -   mvc architacture
