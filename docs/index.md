@@ -4,6 +4,12 @@
 
 ## Demo: [https://ashani-admin.herokuapp.com](https://ashani-admin.herokuapp.com)
 
+#### username and password:
+
+    admin
+
+    123456
+
 ### WhiteCodel presents you an admin panel with nodejs, ejs, express, mongoose to minimize your basic operations like
 
 -   mvc architacture
