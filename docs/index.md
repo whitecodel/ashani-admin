@@ -4,9 +4,11 @@
 
 ## Demo: [https://ashani-admin.herokuapp.com](https://ashani-admin.herokuapp.com)
 
-#### username and password:
+#### username:
 
     admin
+
+#### password:
 
     123456
 
